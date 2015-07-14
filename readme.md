@@ -12,7 +12,7 @@
 
 I just spent an embarassingly long time tryna do DOM stuff (load jquery) in main.js. main.js isn't associated with the window (like a normal in-browser js file is), so it doesn't have a `document` or `window` object.
 
-Use <script> tags in index.html like a normal person.
+Use `<script>` tags in index.html like a normal person.
 
 main.js is for electron-specific native stuff (like quitting the app)
 
