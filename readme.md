@@ -16,6 +16,8 @@ Use `<script>` tags in index.html instead (src is obv good), just like in every 
 
 main.js is for electron-specific native stuff (like quitting the app)
 
+this is totally explained [in the electron quickstart docs](http://electron.atom.io/docs/v0.29.0/tutorial/quick-start/#differences-between-main-process-and-renderer-process) but I didn't get it until I tried in practice.
+
 ### gotta delete the built app before recompiling
 
 npm gives me an error when I try `npm run build` without deleting the old Example.app
