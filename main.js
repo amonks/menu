@@ -1,18 +1,18 @@
 var menubar = require('menubar');
+var ipc = require('ipc');
 
 var mb = menubar({dir: __dirname});
 
-var ipc = require('ipc');
+// // this makes the chrome devtools show up
+// mb.once('show', function () {
+//   mb.window.openDevTools();
+// });
 
 mb.on('ready', function ready () {
-  console.log('app is ready');
-});
-
-mb.once('show', function () {
-  mb.window.openDevTools();
+  console.log('app is ready'); // shows up in terminal with `npm start`
+  // put stuff here i guess?
 });
 
 ipc.on('terminate', function terminate (ev) {
-  canQuit = true;
   mb.app.terminate();
 });
