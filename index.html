@@ -1,0 +1,19 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" />
+<title>Example App</title>
+</head>
+<body>
+  hello world
+  <button id="quit">quit</button>
+
+  <script>
+    var ipc = require('ipc');
+    var $ = require('jquery');
+
+    $(document).on('click', '#quit', function(e) {
+      ipc.send('terminate');
+    });
+  </script>
+</body>
+</html>
